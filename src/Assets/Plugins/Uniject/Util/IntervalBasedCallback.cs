@@ -9,7 +9,7 @@ namespace UnijectUtil {
         private ITime time;
 
         private float timeRemaining;
-        public IntervalBasedCallback(TestableGameObject obj, ITime time) : base(obj) {
+        public IntervalBasedCallback(IGameObject obj, ITime time) : base(obj) {
             this.time = time;
         }
 

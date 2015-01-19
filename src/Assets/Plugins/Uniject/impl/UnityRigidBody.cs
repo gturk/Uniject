@@ -8,7 +8,7 @@ namespace Uniject.Impl {
         public UnityRigidBody(GameObject obj) {
             this.body = obj.GetComponent<Rigidbody>();
             if (this.body == null) {
-                this.body = obj.AddComponent<Rigidbody>();
+				throw new NullReferenceException("Object " + obj.name  + " expected to have a RigidBody but none was found");
             }
         }
 

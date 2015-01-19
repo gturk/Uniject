@@ -1,13 +1,18 @@
 using System;
+using Uniject;
 using UnityEngine;
 
 namespace Uniject.Impl {
-    public class UnityNavmeshAgent : INavmeshAgent {
+    public class UnityNavmeshAgent : TestableComponent, INavmeshAgent {
         private NavMeshAgent agent;
-		private GameObject obj;
-        public UnityNavmeshAgent(GameObject obj) {
+		private IGameObject obj;
+        public UnityNavmeshAgent(IGameObject obj) : base(obj)
+		{
             this.obj = obj;
             this.agent = obj.GetComponent<NavMeshAgent>();
+			if (null == this.agent) {
+				throw new NullReferenceException("Object " + obj.Name  + " expected to have a NavMeshAgent but none was found");
+            }
         }
 
         public void Stop() {
@@ -15,9 +20,6 @@ namespace Uniject.Impl {
         }
 
 		public void onPlacedOnNavmesh() {
-			if (null == this.agent) {
-                this.agent = obj.AddComponent<NavMeshAgent> ();
-            }
             agent.obstacleAvoidanceType = ObstacleAvoidanceType.NoObstacleAvoidance;
             agent.autoRepath = false;
 		}

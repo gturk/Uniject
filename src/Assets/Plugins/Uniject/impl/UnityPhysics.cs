@@ -20,9 +20,9 @@ namespace Uniject.Impl {
             if (result) {
 
                 TestableGameObject testable = null;
-                UnityGameObjectBridge bridge = unityHit.collider.gameObject.GetComponent<UnityGameObjectBridge>();
+                UnityBridgeComponent bridge = unityHit.collider.gameObject.GetComponent<UnityBridgeComponent>();
                 if (null != bridge) {
-                    testable = bridge.wrapping;
+//                    testable = bridge.wrapping;
                 }
 
                 hitinfo = new RaycastHit (unityHit.point,

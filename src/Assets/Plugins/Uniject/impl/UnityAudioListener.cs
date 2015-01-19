@@ -4,10 +4,10 @@ using UnityEngine;
 namespace Uniject.Impl {
     public class UnityAudioListener : TestableComponent, IAudioListener {
 
-        public UnityAudioListener(TestableGameObject parent, GameObject obj) : base(parent) {
-            AudioListener listener = obj.GetComponent<AudioListener>();
+        public UnityAudioListener(IGameObject parent) : base(parent) {
+            AudioListener listener = parent.GetComponent<AudioListener>();
             if (null == listener) {
-                obj.AddComponent<AudioListener>();
+				throw new NullReferenceException("Object " + parent.Name  + " expected to have an AudioListener but none was found");
             }
         }
 

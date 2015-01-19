@@ -1,4 +1,5 @@
 using System;
+using Uniject;
 using UnityEngine;
 
 namespace Uniject.Impl {
@@ -6,9 +7,21 @@ namespace Uniject.Impl {
 
         private Transform transform { get; set; }
 
-        public UnityTransform (UnityEngine.GameObject obj) {
+        public UnityTransform (IGameObject obj) 
+		{
+            this.transform = obj.Transform.ToUnity();
+        }
+		//allow instantiation with concrete object (simplifies testable gameobject)
+        public UnityTransform (GameObject obj)
+		{
             this.transform = obj.transform;
         }
+
+		public Transform UTransform {
+			get {
+				return transform;
+			}
+		}
 
         public Vector3 Position {
             get { return transform.position; }

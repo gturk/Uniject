@@ -27,6 +27,10 @@ namespace Uniject {
             get;
             set;
         }
+		Transform UTransform
+		{
+			get;
+		}
 
         ITransform Parent { get; set; }
 

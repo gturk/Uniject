@@ -2,14 +2,14 @@ using System;
 using UnityEngine;
 
 namespace Uniject.Impl {
-    public class UnityBoxCollider : IBoxCollider {
+    public class UnityBoxCollider : TestableComponent, IBoxCollider {
         private BoxCollider box;
         private UnityPhysicsMaterial mat;
 
-        public UnityBoxCollider(GameObject obj) {
+        public UnityBoxCollider(IGameObject obj) : base(obj) {
             box = obj.GetComponent<BoxCollider>();
             if (null == box) {
-                box = obj.AddComponent<BoxCollider>();
+				throw new NullReferenceException("Object " + obj.Name  + " expected to have a BoxCollider but none was found");
             }
         }
 

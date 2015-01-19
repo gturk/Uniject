@@ -1,13 +1,18 @@
 using System;
+using Uniject;
 using UnityEngine;
 
 namespace Uniject.Impl {
-    public class UnitySphereCollider : ISphereCollider {
+    public class UnitySphereCollider : TestableComponent, ISphereCollider {
         private SphereCollider collider;
         private UnityPhysicsMaterial mat;
 
-        public UnitySphereCollider(GameObject obj) {
-            this.collider = obj.AddComponent<SphereCollider>();
+        public UnitySphereCollider(IGameObject obj) : base(obj)
+		{
+			collider = obj.GetComponent<SphereCollider>();
+            if (null == collider) {
+				throw new NullReferenceException("Object " + obj.Name  + " expected to have a SphereCollider but none was found");
+            }
         }
 
         public float radius {

@@ -3,12 +3,13 @@ using Uniject;
 using UnityEngine;
 
 namespace Uniject.Impl {
-    public class UnityAudioSource : IAudioSource {
+    public class UnityAudioSource : TestableComponent, IAudioSource {
     	private AudioSource source;
-    	public UnityAudioSource(GameObject obj) {
+
+    	public UnityAudioSource(IGameObject obj) : base(obj) {
             this.source = obj.GetComponent<AudioSource>();
             if (this.source == null) {
-                this.source = (AudioSource)obj.AddComponent(typeof(AudioSource));
+				throw new NullReferenceException("Object " + obj.Name  + " expected to have an AudioSource but none was found");
             }
             source.rolloffMode = AudioRolloffMode.Linear;
     	}

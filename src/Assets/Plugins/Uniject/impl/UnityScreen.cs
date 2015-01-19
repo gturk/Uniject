@@ -14,12 +14,12 @@ namespace Uniject.Impl
         public Resolution currentResolution { get { return Screen.currentResolution; } }
         public float dpi { get { return Screen.dpi; } }
         public bool fullScreen { get { return Screen.fullScreen; } set { Screen.fullScreen = value; } }
-        public Resolution[] GetResolution { get { return Screen.GetResolution; } }
+        public Resolution[] GetResolution { get { return Screen.resolutions; } }
         public int height { get { return Screen.height; } }
         public bool lockCursor { get { return Screen.lockCursor; } set { Screen.lockCursor = value; } }
         public ScreenOrientation orientation { get { return Screen.orientation; } set { Screen.orientation = value; } }
         public Resolution[] resolutions { get { return Screen.resolutions; } }
-        public bool showCursor { get { return Screen.showCursor; } set { Screen.showCursor = value; } }
+        public bool showCursor { get { return Cursor.visible; } set { Cursor.visible = value; } }
         public int sleepTimeout { get { return Screen.sleepTimeout; } set { Screen.sleepTimeout = value; } }
         public int width { get { return Screen.width; } }
     }

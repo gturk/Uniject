@@ -2,13 +2,13 @@ using System;
 using UnityEngine;
 
 namespace Uniject.Impl {
-    public class UnityLight : ILight {
+    public class UnityLight : TestableComponent, ILight{
 
         private Light light;
-        public UnityLight(GameObject obj) {
+        public UnityLight(IGameObject obj) : base(obj) {
             light = obj.GetComponent<Light>();
             if (null == light) {
-                light = obj.AddComponent<Light>();
+				throw new NullReferenceException("Object " + obj.Name  + " expected to have Light but none was found");
             }
         }
 

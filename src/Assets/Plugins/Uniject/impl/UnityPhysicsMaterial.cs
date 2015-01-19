@@ -39,12 +39,12 @@ namespace Uniject.Impl {
             set { material.staticFriction2 = value; }
         }
 
-        public PhysicMaterialCombine frictionCombine {
+        public UnityEngine.PhysicMaterialCombine frictionCombine {
             get { return material.frictionCombine; }
             set { material.frictionCombine = value; }
         }
 
-        public PhysicMaterialCombine bounceCombine {
+        public UnityEngine.PhysicMaterialCombine bounceCombine {
             get { return material.bounceCombine; }
             set { material.bounceCombine = value; }
         }

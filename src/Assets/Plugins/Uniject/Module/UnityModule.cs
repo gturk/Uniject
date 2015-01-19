@@ -11,7 +11,8 @@ public class UnityModule : NinjectModule {
     
     public override void Load() {
         Bind<GameObject>().ToProvider<GameObjectProvider>().InScope(Scoping.GameObjectBoundaryScoper);
-        Bind<TestableGameObject>().To<UnityGameObject>().InScope(Scoping.GameObjectBoundaryScoper);
+		Bind<TestableGameObject>().To<UnityGameObject>().InScope(Scoping.GameObjectBoundaryScoper);
+		Bind<IGameObject>().ToProvider(typeof(PrefabProvider));
         Bind<IAudioSource>().To <UnityAudioSource>();
         Bind<ILogger>().To<UnityLogger>();
         Bind<IRigidBody>().To<UnityRigidBody>().InScope(Scoping.GameObjectBoundaryScoper);

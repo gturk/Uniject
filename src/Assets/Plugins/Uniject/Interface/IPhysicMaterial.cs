@@ -9,8 +9,8 @@ namespace Uniject {
         Vector3 frictionDirection2 { get; set; }
         float dynamicFriction2 { get; set; }
         float staticFriction2 { get; set; }
-        PhysicMaterialCombine frictionCombine { get; set; }
-        PhysicMaterialCombine bounceCombine { get; set; }
+        UnityEngine.PhysicMaterialCombine frictionCombine { get; set; }
+        UnityEngine.PhysicMaterialCombine bounceCombine { get; set; }
     }
 }
 
