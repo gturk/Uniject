@@ -10,9 +10,7 @@ using UnityEngine;
 public class UnityModule : NinjectModule {
     
     public override void Load() {
-        Bind<GameObject>().ToProvider<GameObjectProvider>().InScope(Scoping.GameObjectBoundaryScoper);
-		Bind<TestableGameObject>().To<UnityGameObject>().InScope(Scoping.GameObjectBoundaryScoper);
-		Bind<IGameObject>().ToProvider(typeof(PrefabProvider));
+		Bind<IGameObject>().ToProvider<PrefabProvider>().WhenTargetHas(typeof(Resource));
         Bind<IAudioSource>().To <UnityAudioSource>();
         Bind<ILogger>().To<UnityLogger>();
         Bind<IRigidBody>().To<UnityRigidBody>().InScope(Scoping.GameObjectBoundaryScoper);
@@ -23,7 +21,7 @@ public class UnityModule : NinjectModule {
         Bind<IMaths>().To<UnityMath>().InSingletonScope();
         Bind<ITime>().To<UnityTime>().InSingletonScope();
         Bind<ILayerMask>().To<UnityLayerMask>().InSingletonScope();
-        Bind<IResourceLoader>().To<UnityResourceLoader>().InSingletonScope();
+		Bind<IResourceLoader>().To<UnityResourceLoader>().InSingletonScope();
         Bind<IInput>().To<UnityInput>().InSingletonScope();
         Bind<IScreen>().To<UnityScreen>().InSingletonScope();
         Bind<XMLConfigManager>().ToSelf().InSingletonScope();
@@ -34,9 +32,10 @@ public class UnityModule : NinjectModule {
         Bind<ILight>().To<UnityLight>().InScope(Scoping.GameObjectBoundaryScoper);
 
         // Resource bindings.
-        Bind<TestableGameObject>().ToProvider<PrefabProvider>().WhenTargetHas(typeof(Resource));
+//        Bind<TestableGameObject>().ToProvider<PrefabProvider>().WhenTargetHas(typeof(Resource));
         Bind<AudioClip>().ToProvider<ResourceProvider<AudioClip>>().WhenTargetHas(typeof(Resource));
         Bind<PhysicMaterial>().ToProvider<ResourceProvider<PhysicMaterial>>();
         Bind<IPhysicMaterial>().To<UnityPhysicsMaterial>();
+
     }
 }
