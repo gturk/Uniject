@@ -1,42 +1,44 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../../Perforce/wbonner_bacon/TechSpikes/Wheaties/Assets/UnityTestTools/Editor/UITests.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../Perforce/wbonner_bacon/TechSpikes/Wheaties/Assets/Scripts/Views/TextView.cs">
     <Files>
-      <File FileName="../../../Perforce/wbonner_bacon/TechSpikes/Wheaties/Assets/Scripts/Views/ButtonView.cs" Line="23" Column="3" />
-      <File FileName="Assets/Plugins/Uniject/Interface/IButtonListener.cs" Line="6" Column="1" />
-      <File FileName="../../../Perforce/wbonner_bacon/TechSpikes/Wheaties/Assets/Scripts/Views/PlayerUIView.cs" Line="13" Column="2" />
-      <File FileName="../../../Perforce/wbonner_bacon/TechSpikes/Wheaties/Assets/Scripts/Views/Interfaces/IButtonView.cs" Line="9" Column="1" />
-      <File FileName="../../../Perforce/wbonner_bacon/TechSpikes/Wheaties/Assets/UnityTestTools/Editor/UITests.cs" Line="33" Column="1" />
-      <File FileName="../../../Perforce/wbonner_bacon/TechSpikes/Wheaties/Assets/UnityTestTools/UnitTesting/Editor/TestRunner/GuiHelper.cs" Line="36" Column="13" />
+      <File FileName="../../../Perforce/wbonner_bacon/TechSpikes/Wheaties/Assets/Scripts/Views/GameView.cs" Line="40" Column="1" />
+      <File FileName="../../../Perforce/wbonner_bacon/TechSpikes/Wheaties/Assets/Scripts/Views/TextView.cs" Line="17" Column="1" />
+      <File FileName="../../../Perforce/wbonner_bacon/TechSpikes/Wheaties/Assets/Scripts/Views/PlayerUIView.cs" Line="13" Column="72" />
+      <File FileName="../../../Perforce/wbonner_bacon/TechSpikes/Wheaties/Assets/Scripts/Views/Interfaces/ITextView.cs" Line="4" Column="35" />
+      <File FileName="../../../Perforce/wbonner_bacon/TechSpikes/Wheaties/Assets/Scripts/ViewDomain.cs" Line="20" Column="8" />
+      <File FileName="../../../Perforce/wbonner_bacon/TechSpikes/Wheaties/Assets/Scripts/ComponentProvider.cs" Line="48" Column="1" />
+      <File FileName="Assets/Plugins/Uniject/Module/UnityModule.cs" Line="20" Column="38" />
+      <File FileName="../../../Perforce/wbonner_bacon/TechSpikes/Wheaties/Assets/Scripts/DemoViewProvider.cs" Line="37" Column="1" />
+      <File FileName="../../../Perforce/wbonner_bacon/TechSpikes/Wheaties/Assets/Scripts/Views/Interfaces/IButtonView.cs" Line="1" Column="1" />
+      <File FileName="../../../Perforce/wbonner_bacon/TechSpikes/Wheaties/Assets/UnityTestTools/UnitTesting/Editor/TestRunner/GuiHelper.cs" Line="6" Column="12" />
+      <File FileName="../../../Perforce/wbonner_bacon/TechSpikes/Wheaties/Assets/UnityTestTools/UnitTesting/Editor/UITests.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="Uniject" expanded="True" />
+          <Node name="Uniject" expanded="True">
+            <Node name="References" expanded="True" />
+            <Node name="Module" expanded="True" />
+          </Node>
         </State>
-      </Pad>
-      <Pad Id="ClassPad">
-        <State expanded="True" selected="True" />
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State />
       </Pad>
-      <Pad Id="ConnectionManagerPad">
-        <State selected="True" />
-      </Pad>
       <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State expanded="True">
-          <Node name="Assembly-CSharp-Editor" expanded="True">
-            <Node name="GameplayTests" expanded="True">
-              <Node name="UITests" expanded="True" selected="True" />
-            </Node>
-          </Node>
-        </State>
+        <State expanded="True" selected="True" />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/wbonner/Perforce/wbonner_bacon/TechSpikes/Wheaties/Assets/Scripts/Views/GameView.cs" line="53" />
+      <Breakpoint file="/Users/wbonner/Perforce/wbonner_bacon/TechSpikes/Wheaties/Assets/Scripts/Views/PlayerUIView.cs" line="33" />
+      <Breakpoint file="/Users/wbonner/Perforce/wbonner_bacon/TechSpikes/Wheaties/Assets/Scripts/Views/PlayerUIView.cs" line="17" />
+      <Breakpoint file="/Users/wbonner/Perforce/wbonner_bacon/TechSpikes/Wheaties/Assets/Scripts/Views/TextView.cs" line="9" />
+      <Breakpoint file="/Users/wbonner/Perforce/wbonner_bacon/TechSpikes/Wheaties/Assets/Scripts/Views/TextView.cs" line="14" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
