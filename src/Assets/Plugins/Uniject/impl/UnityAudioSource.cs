@@ -3,7 +3,7 @@ using Uniject;
 using UnityEngine;
 
 namespace Uniject.Impl {
-    public class UnityAudioSource : TestableComponent, IAudioSource {
+    public class UnityAudioSource : UnityComponent, IAudioSource {
     	private AudioSource source;
 
     	public UnityAudioSource(IGameObject obj) : base(obj) {

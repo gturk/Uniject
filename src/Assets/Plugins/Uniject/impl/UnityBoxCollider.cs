@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 namespace Uniject.Impl {
-    public class UnityBoxCollider : TestableComponent, IBoxCollider {
+    public class UnityBoxCollider : UnityComponent, IBoxCollider {
         private BoxCollider box;
         private UnityPhysicsMaterial mat;
 

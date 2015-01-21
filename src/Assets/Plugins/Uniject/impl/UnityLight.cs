@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 namespace Uniject.Impl {
-    public class UnityLight : TestableComponent, ILight{
+    public class UnityLight : UnityComponent, ILight{
 
         private Light light;
         public UnityLight(IGameObject obj) : base(obj) {

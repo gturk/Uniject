@@ -3,7 +3,7 @@ using Uniject;
 using UnityEngine;
 
 namespace Uniject.Impl {
-    public class UnityNavmeshAgent : TestableComponent, INavmeshAgent {
+    public class UnityNavmeshAgent : UnityComponent, INavmeshAgent {
         private NavMeshAgent agent;
 		private IGameObject obj;
         public UnityNavmeshAgent(IGameObject obj) : base(obj)

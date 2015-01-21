@@ -66,6 +66,11 @@ namespace Uniject
 		public virtual void OnGUI()
 		{
 		}
+
+		//TODO:: added for backwards compatibility, remove and put on collision based components
+		public virtual void OnCollisionEnter(Collision c)
+		{
+		}
 	}
 }
 

@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 namespace Uniject.Impl {
-    public class UnityAudioListener : TestableComponent, IAudioListener {
+    public class UnityAudioListener : UnityComponent, IAudioListener {
 
         public UnityAudioListener(IGameObject parent) : base(parent) {
             AudioListener listener = parent.GetComponent<AudioListener>();

@@ -48,6 +48,9 @@
     <Reference Include="System.Xml.Linq">
       <HintPath>Assets\Plugins\Uniject\Assembly\System.Xml.Linq.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\..\..\Applications\Unity\Unity.app\Contents\UnityExtensions\Unity\GUISystem\UnityEngine.UI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Plugins\Uniject\Interface\IAudioListener.cs" />
@@ -86,7 +89,6 @@
     <Compile Include="Assets\Plugins\Uniject\impl\LevelLoadListener.cs" />
     <Compile Include="Assets\Plugins\Uniject\impl\Scoping.cs" />
     <Compile Include="Assets\Plugins\Uniject\impl\TestableAudioSource.cs" />
-    <Compile Include="Assets\Plugins\Uniject\impl\TestableComponent.cs" />
     <Compile Include="Assets\Plugins\Uniject\impl\TestableGameObject.cs" />
     <Compile Include="Assets\Plugins\Uniject\impl\UnityAudioListener.cs" />
     <Compile Include="Assets\Plugins\Uniject\impl\UnityAudioSource.cs" />
@@ -123,6 +125,9 @@
     <Compile Include="Assets\Plugins\Uniject\Interface\IMaterial.cs" />
     <Compile Include="Assets\Plugins\Uniject\impl\UnityMaterial.cs" />
     <Compile Include="Assets\Plugins\Uniject\impl\ToUnijectExtensions.cs" />
+    <Compile Include="Assets\Plugins\Uniject\Interface\IButton.cs" />
+    <Compile Include="Assets\Plugins\Uniject\impl\UnityButton.cs" />
+    <Compile Include="Assets\Plugins\Uniject\Interface\IButtonListener.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

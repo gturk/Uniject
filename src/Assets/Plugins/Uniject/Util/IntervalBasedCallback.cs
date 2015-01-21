@@ -2,7 +2,7 @@ using System;
 using Uniject;
 
 namespace UnijectUtil {
-    public class IntervalBasedCallback : TestableComponent {
+    public class IntervalBasedCallback : UnityComponent {
         public Action callback { get; set; }
         public TimeSpan interval { get; set; }
 

@@ -10,7 +10,7 @@ namespace Uniject {
     /// </summary>
     public abstract class TestableGameObject {
 
-        private List<TestableComponent> components = new List<TestableComponent>();
+        private List<UnityComponent> components = new List<UnityComponent>();
 
         public ITransform transform { get; private set; }
 
@@ -18,7 +18,7 @@ namespace Uniject {
             this.transform = transform;
         }
 
-        public void registerComponent (Uniject.TestableComponent component) {
+        public void registerComponent (Uniject.UnityComponent component) {
             components.Add(component);
         }
 
@@ -26,7 +26,7 @@ namespace Uniject {
 
         public virtual void Destroy () {
             if (!destroyed) {
-                foreach (TestableComponent component in this.components) {
+                foreach (UnityComponent component in this.components) {
                     component.OnDestroy();
                 }
                 destroyed = true;
@@ -36,7 +36,7 @@ namespace Uniject {
         public void Update() {
             if (active) {
                 for (int t = 0; t < components.Count; t++) {
-                    TestableComponent component = components[t];
+                    UnityComponent component = components[t];
                     component.OnUpdate();
                 }
             }
@@ -44,7 +44,7 @@ namespace Uniject {
 
         public T getComponent<T>() where T : class {
             for (int t = 0; t < components.Count; t++) {
-                TestableComponent component = components[t];
+                UnityComponent component = components[t];
                 if (component is T) {
                     return component as T;
                 }

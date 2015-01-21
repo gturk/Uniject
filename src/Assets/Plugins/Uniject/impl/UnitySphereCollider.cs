@@ -3,7 +3,7 @@ using Uniject;
 using UnityEngine;
 
 namespace Uniject.Impl {
-    public class UnitySphereCollider : TestableComponent, ISphereCollider {
+    public class UnitySphereCollider : UnityComponent, ISphereCollider {
         private SphereCollider collider;
         private UnityPhysicsMaterial mat;
 
