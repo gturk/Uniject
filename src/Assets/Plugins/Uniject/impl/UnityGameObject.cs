@@ -3,6 +3,7 @@ using System;
 using UnityEngine;
 using Uniject;
 using Uniject.Impl;
+using Uniject.Util;
 using System.Linq;
 
 namespace Uniject{
@@ -22,7 +23,7 @@ namespace Uniject{
 			this.GameObject = gameObject;
 			this.bridge = gameObject.AddComponent<UnityBridgeComponent>();
 			this.bridge.GameObject = this;
-//			this.Transform = gameObject.transform.ToUniject();
+			this.Transform = gameObject.transform.ToUniject();
 		}
 		
 		public void RegisterComponent(IComponent component) {

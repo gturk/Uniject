@@ -2,6 +2,8 @@ using System;
 using Uniject.Impl;
 using Uniject;
 
+
+//TODO:: re-add extensions for conversion and backing wrappers as needed
 namespace Uniject.Util
 {
 	public static class ToUnijectExtensions
@@ -16,14 +18,14 @@ namespace Uniject.Util
 			return new Quaternion(q.x, q.y, q.z, q.w);
 		}
 		
-//		public static UnityTransform ToUniject(this UnityEngine.Transform t)
-//		{
-//			if (t == null)
-//			{
-//				return null;
-//			}
-//			return new UnityTransform(t);
-//		}
+		public static UnityTransform ToUniject(this UnityEngine.Transform t)
+		{
+			if (t == null)
+			{
+				return null;
+			}
+			return new UnityTransform(t.gameObject);
+		}
 		
 //		public static IAccelerationEvent ToUniject(this UnityEngine.AccelerationEvent e)
 //		{
